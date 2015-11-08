@@ -1,0 +1,164 @@
+// ==========================================================================
+// Site settings
+// ==========================================================================
+
+// Spaces
+// ========================================================================== */
+
+// Break Point
+@breakpoint: 736px;
+
+// Container width
+@page_pc_width:    1024px;
+@page_sp_width:    100%;
+
+// Base line height
+@line_height: 1.4;
+
+// Section space
+@section_space:      30px;
+@section_space_far:  40px;
+@section_space_near: 20px;
+@section_space_verynear: 15px;
+
+// Parts space
+@parts_space:      11px;
+@parts_space_far:  16px;
+@parts_space_veryfar: 21px;
+@parts_space_near: 6px;
+
+
+// Color
+// ========================================================================== */
+
+// Base text color
+@base_color:    #333;
+
+// Strong color
+@strong_color:  #f60202;
+
+// Strong color - Vinawalk
+@strong_color_vina:  #0090f4;
+@strongest_color_vina:  #f60202;
+
+// Thin color
+@thin_color:  #333;
+
+// Link color
+@link_color:    #333;
+@visited_color: @link_color;
+@hover_color:   @link_color;
+@active_color:  @hover_color;
+
+
+// Other
+// ========================================================================== */
+
+// Alpha Rollover opacity (unit: percent)
+@rollover_opacity: 60;
+
+// Alpha Rollover holder radius
+@rollover_holder_radius: 6px;
+
+
+// ==========================================================================
+// Mixin
+// ==========================================================================
+
+// Remove first item space
+.first-space-none() {
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+// Set space
+.space(section-far)  { .first-space-none; margin-top: @section_space_far; }
+.space(section-near) { .first-space-none; margin-top: @section_space_near; }
+.space(section-verynear) { .first-space-none; margin-top: @section_space_verynear; }
+.space(section)      { .first-space-none; margin-top: @section_space; }
+.space(veryfar)      { .first-space-none; margin-top: @parts_space_veryfar; }
+.space(far)          { .first-space-none; margin-top: @parts_space_far; }
+.space(near)         { .first-space-none; margin-top: @parts_space_near; }
+.space(medium)       { .first-space-none; margin-top: @parts_space; }
+.space(none)         { margin-top: 0; }
+.space()             { .first-space-none; margin-top: @parts_space; }
+
+// Inline block (legacy IE)
+.inline-block(@_valign: top) {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: @_valign;
+}
+
+// Clearfix
+.clearfix() {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Rectanglize
+.rect() {
+  overflow: hidden;
+  zoom: 1;
+}
+
+// Image replace
+.image-replace() {
+  white-space:nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+// Word break
+.word-break() {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+// Font size
+.font-size(@_target_size, @_base_size:10) {
+  font-size: round(percentage(@_target_size / @_base_size), 2);
+}
+
+// Font size (important)
+.font-size-important(@_target_size, @_base_size:10) {
+  font-size: round(percentage(@_target_size / @_base_size), 2) !important;
+}
+
+// (Vertical and horizontal) centered image
+.centered-image(@_w, @_h) {
+  display: table-cell;
+  width: @_w;
+  height: @_h;
+  text-align: center;
+  vertical-align: middle;
+  *layout-grid-line: @_h;
+
+  img {
+    width: auto;
+    max-width: @_w;
+    height: auto;
+    max-height: @_h;
+  }
+}
+
+// Wrap Border
+.wrap-border {
+  box-shadow: 0 0 0 1px #ddd inset;
+
+  img {
+    z-index: -1;
+    position: relative;
+  }
+}

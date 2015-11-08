@@ -1,0 +1,193 @@
+@import "_global";
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+
+/* Initialize
+   ========================================================================== */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strong, sub, sup, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, main,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Display
+   ========================================================================== */
+article, aside, details, figcaption, figure,
+footer, header, main, menu, nav, section {
+  display: block;
+}
+
+.win,
+.mac {
+  overflow-y: scroll;
+}
+
+/* Fonts
+   ========================================================================== */
+html {
+  font-size: 0.625em;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, dt, dd, li, caption, col, th, td, p, address, figcaption {
+  font-size: 1.4em;
+}
+
+@media screen and (max-width: @breakpoint) {
+  h1, h2, h3, h4, h5, h6, dt, dd, li, caption, col, th, td, p, address, figcaption {
+    font-size: 1.3em;
+  }
+}
+
+dd dt, dd dd, dd li, dd p, dd caption, dd col, dd th, dd td, dd figcaption,
+li dt, li dd, li li, li p, li caption, li col, li th, li td, li figcaption,
+th dt, th dd, th li, th p, th caption, th col, th th, th td, th figcaption,
+td dt, td dd, td li, td p, td caption, td col, td th, td td, td figcaption {
+  font-size: 1em;
+}
+
+sup,
+sub {
+  font-size: 0.83em;
+}
+
+body,
+input,
+textarea,
+select {
+  font-family: "Hiragino Kaku Gothic ProN", "Meiryo", "MS PGothic", sans-serif;
+
+  .ie & {
+    font-family: "Meiryo", "MS PGothic", sans-serif;
+  }
+}
+
+/* Style
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption {
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+}
+
+th, td {
+  vertical-align: top;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+address {
+  font-style: normal;
+  font-weight: normal;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="tel"] {
+  margin: 0;
+  line-height: normal;
+}
+
+input[type="image"] {
+  cursor: pointer;
+  vertical-align: top;
+}
+
+textarea {
+  margin: 0;
+  vertical-align: top;
+  resize: vertical;
+}
+
+img {
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic;
+}
+
+object, embed, iframe {
+  vertical-align: top;
+  outline: none;
+  max-width: 100%;
+}
+
+em, strong {
+  font-style: normal;
+  font-weight: bold;
+}
+
+mark {
+  color: inherit;
+  background-color: inherit;
+  font-weight: bold;
+}
+
+sup,
+sub {
+  position: relative;
+  height: 0;
+  line-height: 1;
+  vertical-align: baseline;
+  _vertical-align: bottom;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: .5ex;
+}
+
+/* Clearfix
+   ========================================================================== */
+header, footer, main, section, article, aside, nav,
+.page-container, .page-header, .page-footer,
+.content, .main-content, .sub-content,
+.article, .section, .row {
+  .clearfix;
+}

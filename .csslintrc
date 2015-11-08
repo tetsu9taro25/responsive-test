@@ -1,0 +1,19 @@
+{
+  "adjoining-classes": false,
+  "box-model": false,
+  "box-sizing": false,
+  "compatible-vendor-prefixes": false,
+  "display-property-grouping": false,
+  "duplicate-background-images": false,
+  "floats": false,
+  "font-sizes": false,
+  "ids": false,
+  "gradients": false,
+  "important": false,
+  "outline-none": false,
+  "star-property-hack": false,
+  "underscore-property-hack": false,
+  "unique-headings": false,
+  "unqualified-attributes": false,
+  "qualified-headings": false
+}
